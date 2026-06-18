@@ -44,6 +44,14 @@
       <password encrypted="false">123</password>
       <customUserInfoValues/>
     </user>
+    <user userName="john.doe">
+      <firstName>John</firstName>
+      <lastName>Doe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="member">
@@ -52,6 +60,9 @@
     </role>
     <role name="medicoTratante">
       <displayName>MedicoTratante</displayName>
+    </role>
+    <role name="Patolog&#xed;a Admisi&#xf3;n">
+      <displayName>Patolog&#xed;a Admisi&#xf3;n</displayName>
     </role>
   </roles>
   <groups>
@@ -63,6 +74,9 @@
     </group>
     <group name="medicos" parentPath="/Hospital">
       <displayName>Medicos</displayName>
+    </group>
+    <group name="Administrativos" parentPath="/Hospital">
+      <displayName>Administrativos</displayName>
     </group>
   </groups>
   <memberships>
@@ -92,6 +106,17 @@
       <roleName>medicoTratante</roleName>
       <groupName>medicos</groupName>
       <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>john.doe</userName>
+      <roleName>Patolog&#xed;a Admisi&#xf3;n</roleName>
+      <groupName>Administrativos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>john.doe</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
     </membership>
   </memberships>
 </organization:Organization>
